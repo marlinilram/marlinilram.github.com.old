@@ -1716,6 +1716,9 @@ i.icon:before {
 #icon-rss:before {
   content: "\f09e";
 }
+#icon-linkedin:before {
+  content: "\f08c";
+}
 #icon-caret-right:before {
   content: "\f0da";
 }
