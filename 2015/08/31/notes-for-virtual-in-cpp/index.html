@@ -5,22 +5,22 @@
   
   <title>notes-for-virtual-in-cpp | Lin&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="虚函数在继承类中是否还需要virtual关键字？
-虚指针，虚表的具体概念和计算
-虚继承的概念">
+  <meta name="description" content="虚函数在继承类中是否还需要virtual关键字？Ans: 如果子类中定义同名函数签名完全一样则默认自动为虚函数，若重载则会覆盖父类的虚函数（Reference “Effective c++”）
+虚指针，虚表的具体概念Ans: 用于计算其父类到其虚基类地址偏移量
+虚继承的概念Ans: 在多重继承时，当最终派生类继承自多个父类，且这多个父类派生自同一个虚基类，为了告诉编译器在这种情况下这多个父类共享继">
 <meta property="og:type" content="article">
 <meta property="og:title" content="notes-for-virtual-in-cpp">
 <meta property="og:url" content="http://yoursite.com/2015/08/31/notes-for-virtual-in-cpp/index.html">
 <meta property="og:site_name" content="Lin's blog">
-<meta property="og:description" content="虚函数在继承类中是否还需要virtual关键字？
-虚指针，虚表的具体概念和计算
-虚继承的概念">
-<meta property="og:updated_time" content="2015-08-31T06:11:12.039Z">
+<meta property="og:description" content="虚函数在继承类中是否还需要virtual关键字？Ans: 如果子类中定义同名函数签名完全一样则默认自动为虚函数，若重载则会覆盖父类的虚函数（Reference “Effective c++”）
+虚指针，虚表的具体概念Ans: 用于计算其父类到其虚基类地址偏移量
+虚继承的概念Ans: 在多重继承时，当最终派生类继承自多个父类，且这多个父类派生自同一个虚基类，为了告诉编译器在这种情况下这多个父类共享继">
+<meta property="og:updated_time" content="2015-08-31T08:58:28.962Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="notes-for-virtual-in-cpp">
-<meta name="twitter:description" content="虚函数在继承类中是否还需要virtual关键字？
-虚指针，虚表的具体概念和计算
-虚继承的概念">
+<meta name="twitter:description" content="虚函数在继承类中是否还需要virtual关键字？Ans: 如果子类中定义同名函数签名完全一样则默认自动为虚函数，若重载则会覆盖父类的虚函数（Reference “Effective c++”）
+虚指针，虚表的具体概念Ans: 用于计算其父类到其虚基类地址偏移量
+虚继承的概念Ans: 在多重继承时，当最终派生类继承自多个父类，且这多个父类派生自同一个虚基类，为了告诉编译器在这种情况下这多个父类共享继">
   
   
     <link rel="icon" href="/favicon.png">
@@ -113,14 +113,14 @@
       </p>
       <div class="article-entry" itemprop="articleBody">
         <ol>
-<li>虚函数在继承类中是否还需要virtual关键字？</li>
-<li>虚指针，虚表的具体概念和计算</li>
-<li>虚继承的概念</li>
+<li>虚函数在继承类中是否还需要virtual关键字？<br>Ans: 如果子类中定义同名函数签名完全一样则默认自动为虚函数，若重载则会覆盖父类的虚函数（Reference “Effective c++”）</li>
+<li>虚指针，虚表的具体概念<br>Ans: 用于计算其父类到其虚基类地址偏移量</li>
+<li>虚继承的概念<br>Ans: 在多重继承时，当最终派生类继承自多个父类，且这多个父类派生自同一个虚基类，为了告诉编译器在这种情况下这多个父类共享继承自虚基类的成员变量，c++引入了虚继承的概念。</li>
 </ol>
 
       </div>
       <footer class="article-footer">
-        <a data-url="http://yoursite.com/2015/08/31/notes-for-virtual-in-cpp/" data-id="cidzj2qzp000b383fetc1tcbf" class="article-share-link">分享到</a>
+        <a data-url="http://yoursite.com/2015/08/31/notes-for-virtual-in-cpp/" data-id="cidzxq3v1000i4w3feib9iv43" class="article-share-link">分享到</a>
         
         
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/c/">c++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/virtual/">virtual</a></li></ul>
@@ -152,6 +152,16 @@
     
 <nav id="article-nav">
   
+    <a href="/2015/08/31/smart-pointer-in-c/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <p class="article-nav-title">
+        
+          smart pointer in c++
+        
+      </p>
+      <i class="icon" id="icon-chevron-right"></i>
+    </a>
+  
   
     <a href="/2014/06/04/2014-06-04/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">上一篇</strong>
@@ -169,6 +179,22 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul id="recent-post">
+        
+          <li>
+            <div class="item-thumbnail">
+              <a href="/2015/08/31/smart-pointer-in-c/" class="thumbnail">
+  
+    <span class="thumbnail-image thumbnail-none"></span>
+  
+
+</a>
+            </div>
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/c/">c++</a></p>
+              <p class="item-title"><a href="/2015/08/31/smart-pointer-in-c/" class="title">smart pointer in c++</a></p>
+              <p class="item-date"><time datetime="2015-08-31T12:53:38.000Z" itemprop="datePublished">2015-08-31</time></p>
+            </div>
+          </li>
         
           <li>
             <div class="item-thumbnail">
@@ -227,7 +253,7 @@
   <div class="widget-wrap widget-list">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/c/">c++</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/stuff/">stuff</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/blog/">blog</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/c/">c++</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/stuff/">stuff</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -237,7 +263,7 @@
   <div class="widget-wrap widget-list">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -247,7 +273,7 @@
   <div class="widget-wrap widget-list">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/">c++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/korg-sp-170s/">korg sp-170s</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/virtual/">virtual</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/电钢琴/">电钢琴</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/科音/">科音</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/">c++</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/korg-sp-170s/">korg sp-170s</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/smart-pointer/">smart pointer</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/virtual/">virtual</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/电钢琴/">电钢琴</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/科音/">科音</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -257,7 +283,7 @@
   <div class="widget-wrap widget-float">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/c/" style="font-size: 10px;">c++</a> <a href="/tags/korg-sp-170s/" style="font-size: 10px;">korg sp-170s</a> <a href="/tags/virtual/" style="font-size: 10px;">virtual</a> <a href="/tags/电钢琴/" style="font-size: 10px;">电钢琴</a> <a href="/tags/科音/" style="font-size: 10px;">科音</a>
+      <a href="/tags/c/" style="font-size: 20px;">c++</a> <a href="/tags/korg-sp-170s/" style="font-size: 10px;">korg sp-170s</a> <a href="/tags/smart-pointer/" style="font-size: 10px;">smart pointer</a> <a href="/tags/virtual/" style="font-size: 10px;">virtual</a> <a href="/tags/电钢琴/" style="font-size: 10px;">电钢琴</a> <a href="/tags/科音/" style="font-size: 10px;">科音</a>
     </div>
   </div>
 

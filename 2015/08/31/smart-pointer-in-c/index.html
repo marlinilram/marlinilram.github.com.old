@@ -3,18 +3,36 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: Career | Lin&#39;s blog</title>
+  <title>smart pointer in c++ | Lin&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Here is a demo reel for some of my past projects.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Demo reel for some of my past projects">
-<meta property="og:url" content="http://yoursite.com/demo-reel/index.html">
+  <meta name="description" content="A code example for smart pointer in c++. [From “Cracking the Code Inerview”]
+
+template  class SmartPointer {
+public:
+    SmartPointer(T * ptr) {
+        ref = ptr;
+        ref_count = (unsigned*)mallo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="smart pointer in c++">
+<meta property="og:url" content="http://yoursite.com/2015/08/31/smart-pointer-in-c/index.html">
 <meta property="og:site_name" content="Lin's blog">
-<meta property="og:description" content="Here is a demo reel for some of my past projects.">
-<meta property="og:updated_time" content="2015-08-27T04:53:41.365Z">
+<meta property="og:description" content="A code example for smart pointer in c++. [From “Cracking the Code Inerview”]
+
+template  class SmartPointer {
+public:
+    SmartPointer(T * ptr) {
+        ref = ptr;
+        ref_count = (unsigned*)mallo">
+<meta property="og:updated_time" content="2015-08-31T13:01:12.005Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Demo reel for some of my past projects">
-<meta name="twitter:description" content="Here is a demo reel for some of my past projects.">
+<meta name="twitter:title" content="smart pointer in c++">
+<meta name="twitter:description" content="A code example for smart pointer in c++. [From “Cracking the Code Inerview”]
+
+template  class SmartPointer {
+public:
+    SmartPointer(T * ptr) {
+        ref = ptr;
+        ref_count = (unsigned*)mallo">
   
   
     <link rel="icon" href="/favicon.png">
@@ -82,11 +100,11 @@
           <section id="main">
             <div class="main-body-header">
 
-              <h1 class="header"><i class="icon" id="icon-tag"></i>标签：<em>Career</em></h1>
+              <h1 class="header"><a class="page-title-link" href="/categories/c/">c++</a></h1>
             </div>
             <div class="main-body-content">
               
-  <article id="page-undefined" class="article article-single article-type-page" itemscope itemprop="blogPost">
+  <article id="post-smart-pointer-in-c" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
       <!--  -->
       
@@ -94,25 +112,62 @@
           
   
     <h1 class="article-title" itemprop="name">
-      Demo reel for some of my past projects
+      smart pointer in c++
     </h1>
   
 
         </header>
       
       <p class="article-byline">
-        <a href="/demo-reel/index.html" class="article-date">
-  <time datetime="2015-08-27T01:03:19.000Z" itemprop="datePublished">2015-08-27</time>
+        <a href="/2015/08/31/smart-pointer-in-c/" class="article-date">
+  <time datetime="2015-08-31T12:53:38.000Z" itemprop="datePublished">2015-08-31</time>
 </a>
       </p>
       <div class="article-entry" itemprop="articleBody">
-        <p>Here is a demo reel for some of my past projects.</p>
-<video src="../video/demoreel.mp4" width="1330" height="720" controls preload=""></video>
+        <p>A code example for smart pointer in c++. [From “Cracking the Code Inerview”]</p>
+<pre><code>
+template <class t=""> class SmartPointer {
+public:
+    SmartPointer(T * ptr) {
+        ref = ptr;
+        ref_count = (unsigned*)malloc(sizeof(unsigned));
+        *ref_count = 1;
+    }
+    SmartPointer(SmartPointer<t> & sptr) {
+        ref = sptr.ref;
+        ref_count = sptr.ref_count;
+        ++*ref_count;
+    }
+    SmartPointer<t> & operator=(SmartPointer<t> & sptr) {
+        if (this != &sptr) {
+            ref = sptr.ref;
+            ref_count = sptr.ref_count;
+            ++*ref_count;
+        }
+        return *this;
+    }
+    ~SmartPointer() {
+        --*ref_count;
+        if (*ref_count == 0) {
+            delete ref;
+            free(ref_count);
+            ref = NULL;
+            ref_count = NULL;
+        }
+    }
+    T getValue() { return *ref; }
+protected:
+    T * ref;
+    unsigned * ref_count;
+};
+</t></t></t></class></code></pre>
       </div>
       <footer class="article-footer">
-        <a data-url="http://yoursite.com/demo-reel/index.html" data-id="cidzxq3v100094w3fv60iv4vk" class="article-share-link">分享到</a>
+        <a data-url="http://yoursite.com/2015/08/31/smart-pointer-in-c/" data-id="cidzxq3v1000b4w3fd35w13ou" class="article-share-link">分享到</a>
         
         
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/c/">c++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/smart-pointer/">smart pointer</a></li></ul>
+
       </footer>
     </div>
   </article>
@@ -136,6 +191,19 @@
       
     </ul>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/08/31/notes-for-virtual-in-cpp/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <p class="article-nav-title">notes-for-virtual-in-cpp</p>
+      <i class="icon" id="icon-chevron-left"></i>
+    </a>
+  
+</nav>
+
   
   <div class="widgets-container">
     
